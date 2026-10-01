@@ -1,0 +1,219 @@
+/* 카페 주문 앱 전체 컨테이너 */
+.cafe-app {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(107, 66, 38, 0.12);
+  padding: 36px 28px;
+}
+
+/* 상단 헤더 영역 */
+.cafe-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.cafe-logo {
+  font-size: 54px;
+  margin-bottom: 8px;
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.cafe-title {
+  font-size: 26px;
+  color: #6b4226;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.cafe-subtitle {
+  font-size: 14px;
+  color: #8c7159;
+  margin-top: 6px;
+}
+
+/* 구분선 */
+.divider {
+  height: 1px;
+  background-color: #f0e6dc;
+  margin: 20px 0 24px 0;
+  border: none;
+}
+
+/* 각 입력 폼 그룹 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* 라벨 스타일 */
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: #4a3525;
+  margin-bottom: 8px;
+}
+
+.required-mark {
+  color: #d32f2f;
+  margin-left: 4px;
+}
+
+/* 텍스트 입력칸, 전화번호, 셀렉트 드롭다운, 텍스트 영역 */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: '맑은 고딕', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1.5px solid #dfd5cb;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 입력칸 포커스 시 테두리 갈색 + 연한 갈색 그림자 */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #6b4226;
+  box-shadow: 0 0 0 3px rgba(107, 66, 38, 0.18);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 라디오 및 체크박스 가로 정렬 그룹 */
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  padding: 4px 0;
+}
+
+.choice-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #4a3b32;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 라디오 & 체크박스 강조 색상 */
+.choice-input {
+  accent-color: #6b4226;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+/* 예상 금액 영역: 큰 글씨(24px), 갈색, 굵게, 가운데 정렬 */
+.price-box {
+  background-color: #faf6f0;
+  border: 1.5px dashed #d5c3b2;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 26px 0 16px 0;
+  text-align: center;
+}
+
+.price-title {
+  font-size: 14px;
+  color: #8c7159;
+  margin-bottom: 4px;
+}
+
+.price-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6b4226;
+}
+
+/* 버튼 그룹 (주문하기 & 다시 작성) */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* 주문하기 버튼: 갈색 배경(#6b4226), 흰색 글씨, hover시 약간 밝게 */
+.btn-submit {
+  flex: 2;
+  padding: 13px 20px;
+  background-color: #6b4226;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(107, 66, 38, 0.25);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+  background-color: #825232;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* 다시 작성 버튼 */
+.btn-reset {
+  flex: 1;
+  padding: 13px 16px;
+  background-color: #efe8df;
+  color: #5d4637;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #d8ccc0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-reset:hover {
+  background-color: #e2d7cb;
+}
+
+/* 주문 확인 메시지: 연두색 배경, 초록 글씨, 둥근 모서리 */
+.order-confirmation {
+  margin-top: 24px;
+  padding: 18px 20px;
+  background-color: #eaf7ea;
+  color: #276738;
+  border: 1.5px solid #a3d9a5;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  word-break: keep-all;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.confirmation-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.confirmation-text {
+  font-weight: 600;
+}
